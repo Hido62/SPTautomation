@@ -43,13 +43,16 @@ namespace SPTautomation
             IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
             jse.ExecuteScript("window.scrollBy(0,500)");
 
-            //Identify the paragraph 
-            IWebElement validation = driver.FindElement(By.XPath("(//div[contains(@class,'wpb_wrapper')])[12]/p/strong"));
+            //Identify header
+            IWebElement header = driver.FindElement(By.XPath("(//div[@class='wpb_wrapper'][contains(., 'Employee Experience')])[2]"));
+
+            ////Identify the paragraph 
+            //IWebElement validation = driver.FindElement(By.XPath("(//div[contains(@class,'wpb_wrapper')])[12]/p/strong"));
 
             // Assert that required text is visible on the page
-            if (validation.Text == "Strong")
+            if (header.Text == "Employee Experience")
             {
-                Console.WriteLine("You have successfully navigated to the right page, test passed");
+                Console.WriteLine("You have successfully navigated to the right page. test passed");
             }
 
             else
