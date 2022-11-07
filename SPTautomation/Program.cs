@@ -47,8 +47,8 @@ namespace SPTautomation
             //IWebElement header = driver.FindElement(By.XPath("(//div[@class='wpb_wrapper'][contains(., 'Employee Experience')])[2]"));
             IWebElement header = driver.FindElement(By.XPath("//div/h3[contains(.,'Employee Experience')]"));
 
-            ////Identify the paragraph 
-            //IWebElement validation = driver.FindElement(By.XPath("(//div[contains(@class,'wpb_wrapper')])[12]/p/strong"));
+            //Identify the paragraph 
+            IWebElement validation = driver.FindElement(By.XPath("(//div[contains(@class,'wpb_wrapper')])[12]/p/strong"));
 
             // Assert that required text is visible on the page
             if (header.Text == "Employee Experience")
@@ -61,7 +61,7 @@ namespace SPTautomation
                 Console.WriteLine("Test not successful");
             }
 
-           // driver.Quit();
+            driver.Quit();
         }
     }
 }
