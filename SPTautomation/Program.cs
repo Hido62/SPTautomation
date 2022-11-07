@@ -44,7 +44,8 @@ namespace SPTautomation
             jse.ExecuteScript("window.scrollBy(0,500)");
 
             //Identify header
-            IWebElement header = driver.FindElement(By.XPath("(//div[@class='wpb_wrapper'][contains(., 'Employee Experience')])[2]"));
+            //IWebElement header = driver.FindElement(By.XPath("(//div[@class='wpb_wrapper'][contains(., 'Employee Experience')])[2]"));
+            IWebElement header = driver.FindElement(By.XPath("//div/h3[contains(.,'Employee Experience')]"));
 
             ////Identify the paragraph 
             //IWebElement validation = driver.FindElement(By.XPath("(//div[contains(@class,'wpb_wrapper')])[12]/p/strong"));
@@ -59,6 +60,8 @@ namespace SPTautomation
             {
                 Console.WriteLine("Test not successful");
             }
+
+           // driver.Quit();
         }
     }
 }
