@@ -51,7 +51,7 @@ namespace SPTautomation
             IWebElement validation = driver.FindElement(By.XPath("(//div[contains(@class,'wpb_wrapper')])[12]/p/strong"));
 
             // Assert that required text is visible on the page
-            if (header.Text == "Employee Experience")
+            if (header.Text != "Employee Experience")
             {
                 Console.WriteLine("You have successfully navigated to the right page. test passed");
             }
